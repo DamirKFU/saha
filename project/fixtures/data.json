@@ -1,0 +1,75 @@
+[
+{
+   "model": "tests.test",
+   "pk": 1,
+   "fields": {
+      "name": "32"
+   }
+},
+{
+   "model": "tests.question",
+   "pk": 11,
+   "fields": {
+      "test": 1,
+      "text": "Кто я",
+      "number": 1
+   }
+},
+{
+   "model": "tests.question",
+   "pk": 12,
+   "fields": {
+      "test": 1,
+      "text": "Кто ты",
+      "number": 2
+   }
+},
+{
+   "model": "tests.answer",
+   "pk": 4,
+   "fields": {
+      "question": 11,
+      "text": "Я"
+   }
+},
+{
+   "model": "tests.answer",
+   "pk": 5,
+   "fields": {
+      "question": 11,
+      "text": "Он"
+   }
+},
+{
+   "model": "tests.answer",
+   "pk": 6,
+   "fields": {
+      "question": 11,
+      "text": "Ты"
+   }
+},
+{
+   "model": "tests.answer",
+   "pk": 7,
+   "fields": {
+      "question": 12,
+      "text": "Я"
+   }
+},
+{
+   "model": "tests.answer",
+   "pk": 8,
+   "fields": {
+      "question": 12,
+      "text": "Дамир"
+   }
+},
+{
+   "model": "tests.answer",
+   "pk": 9,
+   "fields": {
+      "question": 12,
+      "text": "fffff"
+   }
+}
+]
