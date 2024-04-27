@@ -23,7 +23,15 @@ class TestFormView(django.views.generic.FormView):
         django.shortcuts.get_object_or_404(tests.models.Test, pk=test_pk)
 
         kwargs = super().get_form_kwargs()
-        questions = tests.models.Question.objects.filter(test__pk=test_pk)
+        questions = (
+            tests.models.Question.objects.select_related(
+                tests.models.Question.test.field.name,
+            )
+            .prefetch_related(
+                tests.models.Question.answers.field.related_query_name(),
+            )
+            .filter(test__pk=test_pk)
+        )
         kwargs["questions"] = questions
 
         return kwargs

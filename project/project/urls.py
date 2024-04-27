@@ -16,3 +16,12 @@ urlpatterns = [
         django.urls.include(django.contrib.auth.urls),
     ),
 ]
+
+
+if django.conf.settings.DEBUG:
+    urlpatterns += (
+        django.urls.path(
+            "__debug__/",
+            django.urls.include("debug_toolbar.urls"),
+        ),
+    )
